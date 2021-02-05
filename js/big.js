@@ -6,7 +6,8 @@ function setup() {
 
 
 function draw() { 
-	background(0);
+    background(0);
+    fill("#0000ff");
   ellipse(300, 300, circle_size, circle_size);
   circle_size += 1;
   
