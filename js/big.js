@@ -8,9 +8,9 @@ function setup() {
 function draw() { 
 	background(0);
   ellipse(300, 300, circle_size, circle_size);
-  circle_size += 2;
+  circle_size += 1;
   
-  if (circle_size > 600) {
+  if (circle_size > 200) {
     circle_size = 0;
   }
 
