@@ -10,7 +10,7 @@ function setup() {
 
 function draw() {
  background(0);
- fill("#0000ff"); 
+  
  x += speed; 
  if (x > width+radius) {
  x = -radius; 
