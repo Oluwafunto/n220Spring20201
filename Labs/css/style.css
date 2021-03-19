@@ -1,0 +1,52 @@
+body {
+    background: #814648;
+  }
+  
+  h1 {
+    color: #ffe6ba;
+    text-align: center;
+    font-size: 50px;
+  }
+  
+  .name {
+    color: #ffe6ba;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  h2 {
+    color: #ffe6ba;
+    font-size: 25px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #030303;
+    font-family:  Georgia, serif;
+    font-size: 20px;
+  }
+
+  button {
+    background: #cccc99;
+
+  }
+  
+  a:hover {
+    color: #030303;
+    font-style: bold;
+  }
+  
+  .page {
+    text-align: center;
+  }
+  
+  .pagetxt {
+    margin-left: 45px;
+  }
+  
+  .labs {
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin: 100px;
+  }
