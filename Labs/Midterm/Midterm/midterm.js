@@ -19,16 +19,16 @@ let colorArray = ["#2E37FE", "#525C65", "#325C74", "#53868B",  "#7AC5CD", "#C3E4
     function draw() {
         background(70);
     diffCircle.update();
+    if (mouseIsPressed) {
+        diffCircle = diffCircle - 300 ;
+      } else {
+        diffCircle = diffCircle + 300;
+      }
     }
  
     var myCicle = [];
-//fucntion to allo wthe circle move down along the Y axis
-    function mousePressed() { 
-      
-         if(r<200){
-
-         }
-        } 
+//fucntion to allow the circle move down along the Y axis
+   
      
 
     for(var i = 0; i < 11; i++) {
