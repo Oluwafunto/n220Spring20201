@@ -1,3 +1,4 @@
+//Array of colors
 let colorArray = ["#2E37FE", "#525C65", "#325C74", "#53868B",  "#7AC5CD", "#C3E4ED" ,"#67E6EC","#98F5FF", "#BFEFFF", "#F0F8FF" ];
 
     var diffCircle = {
@@ -10,21 +11,22 @@ let colorArray = ["#2E37FE", "#525C65", "#325C74", "#53868B",  "#7AC5CD", "#C3E4
         } 
           
     };
+    //Fucntion to draw the canvas that displays all the drawing
     function setup() {
         createCanvas(800, 600);
     }   
-
+//function to display the circle
     function draw() {
         background(70);
     diffCircle.update();
     }
  
     var myCicle = [];
-
+//fucntion to allo wthe circle move down along the Y axis
     function mousePressed() { 
       
          if(r<200){
-             
+
          }
         } 
      
