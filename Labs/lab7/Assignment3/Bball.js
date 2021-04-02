@@ -27,7 +27,7 @@ function draw() {
   
   myCircle.update();
 
-//key movements
+//Arrow Keys
   if(keyIsDown(LEFT_ARROW)) {
       myCircle.xSpeed = -5;
       fill("#ff0000")
@@ -48,7 +48,7 @@ function draw() {
      fill("#ff0000");
   }
 
-//bounce 
+//Ball bounce 
   if (myCircle.xPos > width) {
       myCircle.xSpeed = -5;
   }
