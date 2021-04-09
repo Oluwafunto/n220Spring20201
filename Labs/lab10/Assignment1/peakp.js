@@ -1,6 +1,10 @@
 let dvBox = document.getElementById("box"); 
 
+//setting backgorund color to green
 dvBox.style.backgroundColor = "#009900";
+
+//variable for boxsize
+let boxSize = 100;
 
 function increaseSize() {
 
@@ -13,6 +17,6 @@ function increaseSize() {
 
     }
 
-    
-dvBox.style.width = 100 + "px";
-dvBox.style.height = 100 + "px";
+//setting box height and width    
+dvBox.style.width = boxSize + "px";
+dvBox.style.height = boxSize + "px";
