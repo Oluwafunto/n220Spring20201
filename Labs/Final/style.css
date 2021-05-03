@@ -1,0 +1,142 @@
+* {
+    background-color:#00FFFF;
+    margin: 0;
+  }
+  
+  /* resizing X and O to fit cells */
+  :root {
+    --cell-size: 100px;
+    --mark-size: calc(var(--cell-size) * 0.9);
+  }
+  
+  /* titleDiv Text color and alignment  */
+  .titleDiv {
+    color: #000000;
+    text-align: center;
+  }
+  
+
+  
+  /* Styling the board*/
+  .board {
+    width: 100vw;
+    height: 50vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    position: relative;
+  }
+  
+  /*conver cursor to poniter when player hovers over cell  */
+  .cell {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #fefced;
+    border-radius: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Invalid coursor for occupied cells */
+  .cell.x,
+  .cell.O {
+    cursor: not-allowed;
+  }
+  
+  /* X color styling*/
+  .cell.x::before,
+  .cell.x::after {
+    background-color: #000000;
+  }
+  
+  
+  /*Hover cell color*/
+  .board.x .cell:not(.x):not(.O):hover::before,
+  .board.x .cell:not(.x):not(.O):hover::after {
+    background-color: #ffffff;
+  }
+  
+
+  /*Hover display and positioning of X*/
+  .cell.x::before,
+  .cell.x::after,
+  .board.x .cell:not(.x):not(.O):hover::before,
+  .board.x .cell:not(.x):not(.O):hover::after {
+    content: "";
+    position: absolute;
+    width: calc(var(--mark-size) * 0.15);
+    height: var(--mark-size);
+  }
+  
+  /*Rotating the lines to make an X*/
+  .cell.x::before,
+  .board.x .cell:not(.x):not(.O):hover::before {
+    transform: rotate(45deg);
+  }
+  
+  /*Opposite line to form the X*/
+  .cell.x::after,
+  .board.x .cell:not(.x):not(.O):hover::after {
+    transform: rotate(-45deg);
+  }
+  
+  /*Hover display and positioning of O*/
+  .cell.O::before,
+  .cell.O::after,
+  .board.O .cell:not(.x):not(.O):hover::before,
+  .board.O .cell:not(.x):not(.O):hover::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  /*Styling of the O variable*/
+  .cell.O::before,
+  .board.O .cell:not(.x):not(.O):hover::before {
+    width: var(--mark-size);
+    height: var(--mark-size);
+    background-color:#fefced;
+  }
+  
+  
+  /*Position of the result detail*/
+  .winning-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    color: #fefced;
+    font-size: 50px;
+    flex-direction: column;
+  }
+  
+  /*Syling of the replay button*/
+  .winning-message button {
+    font-size: 40px;
+    background-color: #630adf;
+    border: 1px solid #fefced;
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+    border-radius: 50px;
+    color: #fefced;
+  }
+  
+  /*New color of te replay button when the mouse is over it*/
+  .winning-message button:hover {
+    background-color: #000000;
+  }
+  
+  /*This shows the winner of each game session*/
+  .winning-message.show {
+    display: flex;
+  }
